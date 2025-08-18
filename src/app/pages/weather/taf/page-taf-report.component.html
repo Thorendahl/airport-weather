@@ -1,0 +1,14 @@
+@defer (when view()) {
+
+    @if (hasTafReport()) {
+        <div class="page-header">{{ view().icaoCode }} TAF</div>
+        <app-taf [report]="tafReport()" [ident]="view().icaoCode"></app-taf>
+    }
+
+    @if (hasError()) {
+        <div class="page-error">{{ error() }}</div>
+    }
+
+} @loading (minimum 500ms) {
+    <div class="page-loading"><i class="fa fa-spinner"></i></div>
+}

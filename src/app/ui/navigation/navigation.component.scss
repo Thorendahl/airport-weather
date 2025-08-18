@@ -1,0 +1,27 @@
+nav {
+    display: grid;
+
+    .nav-menu {
+
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .nav-link {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            gap: .5rem;
+            color: #000;
+            text-decoration: none;
+            width: 100%;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media (min-width: 770px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+}

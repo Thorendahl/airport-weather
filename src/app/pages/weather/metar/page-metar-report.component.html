@@ -1,0 +1,15 @@
+@defer () {
+
+    @if (hasReport()) {
+        <div class="page-header">{{ icaoCode() }} METAR</div>
+        <app-metar [metar]="report()?.metar" [ident]="icaoCode()"></app-metar>
+    }
+
+    @if (hasNearbyReport()) {
+        <div class="page-header">Nearby</div>
+        <app-metar [metar]="nearbyReport()?.[0]?.metar" [ident]="nearbyReport()?.[0]?.ident"></app-metar>
+    }
+
+} @loading (minimum 500ms) {
+    <div class="page-loading"><i class="fa fa-spinner"></i></div>
+}

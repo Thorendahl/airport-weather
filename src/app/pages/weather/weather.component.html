@@ -1,0 +1,14 @@
+<div class="container">
+    <main>
+        <router-outlet/>
+    </main>
+    <nav>
+        <app-navigation [showNavigation]="hasReport()"></app-navigation>
+        <br>
+        <app-history></app-history>
+    </nav>
+    <header>
+        <div (click)="navigateTo()" class="title">{{ title() }}</div>
+        <app-search (icao)="searchForWeather($event)"></app-search>
+    </header>
+</div>

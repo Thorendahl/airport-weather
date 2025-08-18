@@ -1,0 +1,28 @@
+:host {
+    display: grid;
+    width: 100%;
+    background-color: #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.history {
+    font-weight: bold;
+    padding: .75rem 1rem;
+}
+
+.history-item {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: .75rem 1rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+
+    &--empty {
+        background-color: #ffffff;
+        padding: .75rem 1rem;
+        text-transform: capitalize;
+    }
+}

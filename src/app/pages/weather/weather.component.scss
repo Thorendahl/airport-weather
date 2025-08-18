@@ -1,0 +1,75 @@
+/* grid container */
+.container {
+    display: grid;
+
+    grid-template-areas:
+      'header'
+      'nav'
+      'main';
+
+    grid-template-rows:100px 70px 1fr;
+    grid-template-columns:100%;
+
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* general column padding */
+.container > * {
+    box-sizing: border-box;
+}
+
+/* assign columns to grid areas */
+.container > header {
+    grid-area: header;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding: 2rem;
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.container > nav {
+    grid-area: nav;
+    background: #fafafa;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.container > main {
+    grid-area: main;
+    background: #ffffff;
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* tablet breakpoint */
+@media (min-width: 770px) {
+    .container {
+        grid-template-rows:100px auto;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-areas:
+          'header header header header'
+          'nav main main main';
+        /* fallback height */
+        min-height: 100vh;
+
+        /* new small viewport height for modern browsers */
+        min-height: 100svh;
+    }
+
+    .container > nav {
+        align-items: flex-start;
+        padding: 2.25rem 2rem;
+    }
+
+}

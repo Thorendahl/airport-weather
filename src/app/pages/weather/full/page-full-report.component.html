@@ -1,0 +1,27 @@
+@defer (when view()) {
+    <div class="page-header">FULL WEATHER REPORT</div>
+    <br>
+    <div class="page-full">
+        <section>
+            @if (hasReport()) {
+                <div class="page-header">{{ icaoCode() }} METAR</div>
+                <app-metar [metar]="report()?.metar" [ident]="icaoCode()"></app-metar>
+            }
+        </section>
+        <section>
+            @if (hasTafReport()) {
+                <div class="page-header">{{ icaoCode() }} TAF</div>
+                <app-taf [report]="tafReport()" [ident]="view().icaoCode"></app-taf>
+            }
+        </section>
+    </div>
+
+} @loading (minimum 500ms) {
+    <div class="page-loading"><i class="fa fa-spinner"></i></div>
+}
+
+
+
+
+
+

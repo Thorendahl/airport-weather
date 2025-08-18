@@ -1,0 +1,30 @@
+:host {
+    gap: 1rem;
+}
+
+form {
+    text-align: end;
+
+    input {
+        text-transform: uppercase;
+        padding: 0.5rem;
+        border-radius: .25rem;
+    }
+
+    button {
+        margin-inline-start: .5rem;
+        padding: .5rem 1rem;
+        border-radius: 0.25rem;
+        outline: none;
+    }
+}
+
+.input-error {
+    text-align: end;
+    margin-block: .4rem;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #6c2022;
+}
+
+

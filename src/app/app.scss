@@ -1,0 +1,21 @@
+.page-error {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000033;
+    transition: opacity 0.5s;
+
+    .error-message {
+        border: 1px solid grey;
+        border-radius: .5rem;
+        padding: 1.5rem 1rem;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+}

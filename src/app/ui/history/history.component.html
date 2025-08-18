@@ -1,0 +1,7 @@
+<div class="history">History</div>
+@for (icao of history().reverse(); track icao) {
+    <div class="history-item" (click)="loadWeather(icao)">{{ icao }}</div>
+} @empty {
+    <div class="history-item--empty">No history</div>
+}
+

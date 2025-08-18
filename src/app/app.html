@@ -1,0 +1,6 @@
+<router-outlet></router-outlet>
+@if (error()) {
+    <div class="page-error" (click)="closeModal()">
+        <div class="error-message">{{ error() }}</div>
+    </div>
+}

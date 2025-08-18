@@ -1,0 +1,36 @@
+<div class="taf-data">
+
+    <div class="taf-text">
+        {{ tafText() }}
+    </div>
+
+    @for (taf of report(); track $index) {
+
+        <div class="taf-header">
+            <div>{{ taf.date | date: 'shortTime' }} {{ $first ? '(Current)' : '' }}</div>
+        </div>
+
+        <div class="taf-details">
+            <div class="detail-item">
+                <span class="label"><i class="fa fa-circle"></i></span>
+                <span class="value">{{ taf.flightRules.toUpperCase() }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Winds:</span>
+                <span class="value">{{ taf?.wind }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Visibility:</span>
+                <span class="value">{{ taf?.visibility }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Clouds:</span>
+                <span class="value">{{ taf?.clouds }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Expires:</span>
+                <span class="value">{{ taf?.expire | date: 'shortTime' }}</span>
+            </div>
+        </div>
+    }
+</div>

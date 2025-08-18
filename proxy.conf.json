@@ -1,0 +1,11 @@
+{
+  "/weather/report": {
+    "target":  {
+      "host": "api.foreflight.com",
+      "protocol": "https:"
+    },
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}

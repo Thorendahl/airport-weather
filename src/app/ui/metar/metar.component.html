@@ -1,0 +1,52 @@
+@if (metar()) {
+    <div class="metar-data">
+
+        <div class="metar-header">
+            <div><i class="fa fa-circle"></i> {{ metar()?.flightRules?.toUpperCase() }}</div>
+            <div>{{ timeDistance() }}</div>
+        </div>
+
+        <div class="metar-text">
+            {{ metar()?.text }}
+        </div>
+
+        <div class="metar-details">
+            <div class="detail-item">
+                <span class="label">Time:</span>
+                <span class="value">{{ metar()?.date | date: 'shortTime' }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Winds:</span>
+                <span class="value">{{ metar()?.wind }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Visibility:</span>
+                <span class="value">{{ metar()?.visibility }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Clouds:</span>
+                <span class="value">{{ metar()?.clouds }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Temp:</span>
+                <span class="value">{{ metar()?.temperature }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Dewpoint:</span>
+                <span class="value">{{ metar()?.dewpoint }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Altimeter:</span>
+                <span class="value">{{ metar()?.altimeter }} in HG</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Humidity:</span>
+                <span class="value">{{ metar()?.humidity }}%</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Density altitude:</span>
+                <span class="value">{{ metar()?.densityAltitude }}'</span>
+            </div>
+        </div>
+    </div>
+}

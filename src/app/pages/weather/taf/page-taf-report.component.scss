@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    background-color: #fcfcfc;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    padding: 1.25rem;
+    background-color: #eeeeee;
+    text-transform: uppercase;
+}
+
+.page-error {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.page-loading {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
