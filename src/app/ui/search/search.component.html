@@ -1,5 +1,5 @@
 <form [formGroup]="searchForm">
-    <input class="--danger" formControlName="searchInput" maxlength="4" minlength="4" placeholder="Type airport code..." required/>
+    <input formControlName="searchInput" maxlength="4" minlength="4" placeholder="Type airport code..." required/>
     <button (click)="submitIcao()" type="submit">Search</button>
 </form>
 
